@@ -10,6 +10,9 @@ app.use(morgan('dev'))
 app.use(compression())
 app.use(helmet())
 
+// init db----------------------------------------------------------------------
+import './dbs/init.mongodb'
+
 // convert json to object js
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
